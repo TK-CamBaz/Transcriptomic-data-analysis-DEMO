@@ -3,9 +3,9 @@
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="400">
 
 ## Figures and Tables
-Hierarchical clustering             |  K-means clustering
+Hierarchical clustering    |  K-means clustering
 :-------------------------:|:-------------------------:
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_H.png" width="300">  | <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_K.png" width="300">  
+<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_H.png" width="300">|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_K.png" width="300">
 
 
 
