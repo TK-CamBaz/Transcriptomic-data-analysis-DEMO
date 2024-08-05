@@ -21,7 +21,7 @@ Without Exposure vs Reference   |  With Exposure vs Without Exposure   |  With E
 
 ### Top 5 up/down regulated differential expressed genes for each comparison
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/top5function_for_updown.png" width=300>
-Filtered by log(Fold change)
+Ranked by log(Fold change).
 
 ### Up/down regulated pathways for each comparison
 Over-representation analysis    |  Gene set enrichment analysis
@@ -32,8 +32,11 @@ Over-representation analysis    |  Gene set enrichment analysis
 ## Details of each step of flow chart
 The design of RNA-seq data contains 3 treatments, including "With exposure", "Without exposure" and "Reference". The procedure of analysis consist of 5 steps: (1) Download from database / custom data, (2) Quality control, (3) Reference genome indexing, (4) Mapping to genome, (5) Read counts calculation and (6) DEG & enrichment analysis.
 
-## Difference between my strategy and common ones
+## Note
+In this demo, I use three packages/web tools to improve the workflow of the analysis: 
 1. Trimming sequence and generate QC report by **AfterQC** due to its versatility in quality control,
  data filtering, error profiling and base correction automatically. 
 2. Annotating sequence by **eggNOG-mapper** which is a powerful function annotation and prediction web tool. 
 3. Analyzing the gene counts matrix by **iDEP**, a web application with easy-to-use GUI for differential expression and pathway analysis, which saving a lot of time to understand R codes and debug.
+
+## Reference
