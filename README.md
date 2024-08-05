@@ -1,6 +1,6 @@
 # RNA-seq-data-analysis-DEMO
 ## Overview
-It's a common strategy to analyze RNA-seq data of samples with different treatments (_e.g._ Resistance vs Susceptible) to identify gene expression profile, find key genes and biological pathways. Here, a case of mining resistance-related genes using RNA-seq data of _Tetranychus urticae_ is presented. 
+It's a common strategy to analyze RNA-seq data of samples with different treatments (_e.g._ Resistance vs Susceptible) to identify gene expression profile, find key genes and biological pathways. Here, a simple case of mining resistance-related genes using RNA-seq data of _Tetranychus urticae_ is presented. 
 
 ## Workflow
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="400">
@@ -30,5 +30,13 @@ Hierarchical clustering    |  K-means clustering
 ### Volcano plot
 Without Exposure vs Reference   |  With Exposure vs Without Exposure   |  With Exposure vs Reference 
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_H.png"  height=250>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_K.png" height=250>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_K.png" height=250>
+<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_woe_ref.png">|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_woe.png">|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_ref.png">
 
+### Top 5 up/down regulated differential expressed genes for each comparison
+<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/top5function_for_updown.png"  width=300>
+Filtered by log(Fold change)
+
+### Up/down regulated pathways for each comparison
+Over-representation analysis    |  Gene set enrichment analysis
+:-------------------------:|:-------------------------:
+<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_H.png"  height=250>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_K.png" height=250>
