@@ -6,24 +6,26 @@ It's a common strategy to analyze RNA-seq data of samples with different treatme
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="400">
 
 ## Results
-### Heatmap
+In Figiure 1, the expression profiles partially differ among the samples. After filtering (FDR < 0.05 & log(FC) > 2) and ranking (descending by log(FC)) by statistical threshold , several genes are display as its high expression level and siginificance (see Figure 2). 
+
+### Figure 1. Heatmap
 Hierarchical clustering    |  K-means clustering
 :-------------------------:|:-------------------------:
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_H.png"  height=250>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_K.png" height=250>
 
-### Differential expressed genes bar chart
+### Figure 2. Differential expressed genes bar chart
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/sig_gene_stats.png"  width=300>
 
-### Volcano plot
+### Figure 3. Volcano plot
 Without Exposure vs Reference   |  With Exposure vs Without Exposure   |  With Exposure vs Reference 
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_woe_ref.png">|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_woe.png">|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_ref.png">
 
-### Top 5 up/down regulated differential expressed genes for each comparison
+### Table 1. Top 5 up/down regulated differential expressed genes for each comparison
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/top5function_for_updown.png" width=300>
 Ranked by log(Fold change).
 
-### Up/down regulated pathways for each comparison
+### Table 1. Up/down regulated pathways for each comparison
 Over-representation analysis    |  Gene set enrichment analysis
 :-------------------------:|:-------------------------:
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/pathway_ora.png" height=150>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/pathway_gesa.png" height=150>
