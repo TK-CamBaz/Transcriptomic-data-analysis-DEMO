@@ -6,7 +6,7 @@ It's a common strategy to analyze RNA-seq data of samples with different treatme
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="400">
 
 ## Results
-In Figiure 1, the expression profiles partially differ among the samples. After filtering (FDR < 0.05 & log(FC) > 2) and ranking (descending by log(FC)) by statistical threshold , several genes are display as its high expression level and siginificance (see Figure 2). 
+In Figiure 1, the expression profiles in hierarchical and K-means clustering indicate that "With exposure" samples is similar to "Without exposure" ones, while "Reference" ones show different pattern compared to the others. After filtering (FDR < 0.05 & log(FC) > 2) and ranking (descending by log(FC)) the genes by statistical threshold , several genes are display due to its high expression level and siginificance (see Figure 2). Numbers of differential expressed genes in "With exposure" - "Without exposure" are extremely fewer than other two comparisons. It is probably caused by the high similarity between "With exposure" and "Without exposure".
 
 ### Figure 1. Heatmap
 Hierarchical clustering    |  K-means clustering
