@@ -6,6 +6,20 @@ It's a common strategy to analyze RNA-seq data of samples with different treatme
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="400">
 
 ## Results
+(1). "With exposure" samples is similar to "Without exposure" ones, while "Reference" ones show different pattern compared to the others (see Figiure 1, 2 and 3).
+(2).  Differential expressed genes 
+
+BACK domain-containing protein: cullin-RING ubiquitin ligase adaptors that facilitate the ubiquitination of target substrates.
+Lipocalin/cytosolic fatty-acid binding domain-containing protein: transport small hydrophobic molecules such as steroids, bilins, retinoids, and lipids.
+Proteasome assembly chaperone 2: proteasome mediates ubiquitin-dependent proteolysis in eukaryotic cells.
+Sodium/calcium exchanger membrane region: regulate intracellular Ca2+ concentrations in many cells
+Nephrin: are expressed in the nephrocyte (filtration function)
+Cytochrom P450s: the main detoxification enzymes employed by insects to combat the chemical defenses
+Partial AB-hydrolase lipase domain-containing protein: hydrolase activity, acting on ester bonds.
+Intradiol ring-cleavage dioxygenases domain-containing protein: to cleave catechol between two hydroxyl-groups using atmospheric dioxygen.
+
+
+
 In Figiure 1, the expression profiles in hierarchical and K-means clustering indicate that "With exposure" samples is similar to "Without exposure" ones, while "Reference" ones show different pattern compared to the others. After filtering (FDR < 0.05 & log(FC) > 2) and ranking (descending by log(FC)) the genes by statistical threshold , several genes are display due to its high expression level and siginificance (see Figure 2). Numbers of differential expressed genes in "With exposure" - "Without exposure" are extremely fewer than other two comparisons. It is probably caused by the high similarity between "With exposure" and "Without exposure".
 
 ### Figure 1. Heatmap
