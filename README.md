@@ -6,8 +6,9 @@ It's a common strategy to analyze RNA-seq data of samples with different treatme
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="400">
 
 ## Results
-(1). "With exposure" samples is similar to "Without exposure" ones, while "Reference" ones show different pattern compared to the others (see Figiure 1, 2 and 3).
-(2).  Differential expressed genes 
+(1). "With exposure" samples is similar to "Without exposure" ones, while "Reference" ones show different pattern compared to the others (see Figiure 1, 2 and 3). 
+(2).  Up-regulated differential expressed genes are mainly associated to molecular transportation, detoxification, ubiquitination and hydrolase/proteolysis, while down-regulated ones are associated to ATPase, peptidase inhibitor and reduction of peroxides. 
+(3). 
 
 BACK domain-containing protein: cullin-RING ubiquitin ligase adaptors that facilitate the ubiquitination of target substrates.
 Lipocalin/cytosolic fatty-acid binding domain-containing protein: transport small hydrophobic molecules such as steroids, bilins, retinoids, and lipids.
@@ -21,6 +22,9 @@ Intradiol ring-cleavage dioxygenases domain-containing protein: to cleave catech
 Thioredoxin-dependent peroxiredoxin: catalyzes the reduction of hydrogen peroxide and organic hydroperoxides to water and alcohols, respectively.
 Cystatin domain-containing protein: inhibit peptidases.
 Glycosyl transferase family 1 domain-containing protein: transfer UDP, ADP, GDP or CMP linked sugars to a variety of substrates.
+BTB domain-containing protein: including transcription repression , cytoskeleton regulation, tetramerization and gating of ion channels and protein ubiquitination/degradation.
+RNA-directed DNA polymerase: reverse transcriptase.
+AAA+ ATPase domain-containing protein: a central ATPase domain.
 
 
 
