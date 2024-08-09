@@ -40,10 +40,6 @@ Over-representation analysis    |  Gene set enrichment analysis
 :-------------------------:|:-------------------------:
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/pathway_ora.png" height=150>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/pathway_gesa.png" height=150>
 
-
-## Details of each step of flow chart
-The design of RNA-seq data contains 3 treatments, including "With exposure", "Without exposure" and "Reference". The procedure of analysis consist of 5 steps: (1) Download from database / custom data, (2) Quality control, (3) Reference genome indexing, (4) Mapping to genome, (5) Read counts calculation and (6) DEG & enrichment analysis.
-
 ## Note
 In this demo, I use three packages/web tools to improve the workflow of the analysis: 
 1. Trimming sequence and generate QC report by **AfterQC** due to its versatility in quality control,
