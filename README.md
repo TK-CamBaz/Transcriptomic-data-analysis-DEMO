@@ -16,15 +16,15 @@ Hierarchical clustering    |  K-means clustering
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_H.png"  height=250>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_K.png" height=250>
 
 ### Figure 2. Differential expressed genes bar chart
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/sig_gene_stats.png"  width=300>
+<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/sig_gene_stats.png"  height=250>
 
 ### Figure 3. Volcano plot
-Without Exposure vs Reference   |  With Exposure vs Without Exposure   |  With Exposure vs Reference 
-:-------------------------:|:-------------------------:|:-------------------------:
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_woe_ref.png">|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_woe.png">|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_ref.png">
+With Exposure vs Reference  |  Without Exposure vs Reference
+:-------------------------:|:-------------------------:
+<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_ref.png" height=250>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_woe_ref.png" height=250>
 
 ### Table 1. Top 5 up/down regulated differential expressed genes for each comparison
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/top5function_for_updown.png" width=300>
+<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/top5function_for_updown.png" height=250>
 Ranked by log(Fold change).
 
 ### Table 2. Up/down regulated pathways for each comparison
