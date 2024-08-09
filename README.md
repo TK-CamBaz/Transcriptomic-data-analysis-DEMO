@@ -6,10 +6,10 @@ It's a common strategy to analyze RNA-seq data of samples with different treatme
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="450">
 
 ## Results
-(1). Expression patterns of "With exposure"(WE) samples is similar to ones of "Without exposure"(WOE) , while "Reference"(Ref) shows distinct difference compared to the others (see Figiure 1).  
-(2). Little difference is observed between WE_Ref and WOE_Ref in , wihch also suggests the similarity between WE and WOE.  
+(1). Expression patterns of "With exposure" (WE) samples is similar to ones of "Without exposure" (WOE) , while "Reference" (Ref) shows distinct difference compared to the others (see Figiure 1).  
+(2). Little difference is observed between WE_Ref and WOE_Ref in , wihch also suggests the similarity between WE and WOE (see Figiure 2, 3 and Table 1).  
 (3). Up-regulated differential expressed genes are mainly associated to molecular transportation, detoxification, ubiquitination and hydrolase/proteolysis, while down-regulated ones are associated to ATPase, peptidase inhibitor and reduction of peroxides (see Table 1).  
-(4). Up-regulated pathways are mainly associated to membrane of cells/organelles (cellular component), glucan/ATP biosynthetic process (biological process), UDP-glycosyltransferase/monooxygenase/aspartic-type-peptidase activity (molecular function) and drug/glutathione/pyruavte metabolism (KEGG); down-regulated pathways  are mainly associated to cytoplasma/Golgi stack  (cellular component), mannosylation/DNA-topological-change (biological process), acyl-CoA/pigment binding (molecular function) and N-glycan-metabolism/autophagy (KEGG) (see Table 2).
+(4). Up-regulated pathways are mainly associated to membrane of cells/organelles (cellular component), glucan/ATP biosynthetic process (biological process), UDP-glycosyltransferase/monooxygenase/aspartic-type-peptidase activity (molecular function) and drug/glutathione/cytochrome-P450 metabolism (KEGG); down-regulated pathways are mainly associated to cytoplasma/Golgi stack  (cellular component), DNA topological change (biological process), various-transferase/DNA-topoisomerase (molecular function) and N-glycan-metabolism/autophagy (KEGG) (see Table 2).  
 
 ### Figure 1. Heatmap
 Hierarchical clustering    |  K-means clustering
