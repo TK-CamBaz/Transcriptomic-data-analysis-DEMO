@@ -17,18 +17,25 @@ Hierarchical clustering    |  K-means clustering
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_H.png"  height=250>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_K.png" height=250>
 
 ### Figure 2. Differential expressed genes bar chart
+Conditions: FDR <= 0.05 & Log(FC) >=2.  
+
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/sig_gene_stats.png"  height=250>
 
 ### Figure 3. Volcano plot
+Conditions: FDR <= 0.05 & Log(FC) >=2.  
+
 With Exposure vs Reference  |  Without Exposure vs Reference
 :-------------------------:|:-------------------------:
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_ref.png" height=200>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_woe_ref.png" height=200>
 
 ### Table 1. Top 5 up/down regulated differential expressed genes for each comparison
+Conditions: Ranked by log(FC).  
+
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/top5function_for_updown.png" height=250>
-Ranked by log(Fold change).
 
 ### Table 2. Up/down regulated pathways for each comparison
+Conditions: Ranked by FDR.
+
 Over-representation analysis    |  Gene set enrichment analysis
 :-------------------------:|:-------------------------:
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/pathway_ora.png" height=150>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/pathway_gesa.png" height=150>
@@ -45,3 +52,12 @@ In this demo, I use three packages/web tools to improve the workflow of the anal
 3. Analyzing the gene counts matrix by **iDEP**, a web application with easy-to-use GUI for differential expression and pathway analysis, which saving a lot of time to understand R codes and debug.
 
 ## Reference
+Cantalapiedra, C. P., Hernández-Plaza, A., Letunic, I., Bork, P., & Huerta-Cepas, J. (2021). eggNOG-mapper v2: functional annotation, orthology assignments, and domain prediction at the metagenomic scale. Molecular biology and evolution, 38(12), 5825-5829.  
+Chen, S., Huang, T., Zhou, Y., Han, Y., Xu, M., & Gu, J. (2017). AfterQC: automatic filtering, trimming, error removing and quality control for fastq data. BMC bioinformatics, 18, 91-100.  
+Danecek, P., Bonfield, J. K., Liddle, J., Marshall, J., Ohan, V., Pollard, M. O., Whitwham, A., Keane, T., McCarthy, S. A., & Davies, R. M. (2021). Twelve years of SAMtools and BCFtools. Gigascience, 10(2), giab008.  
+Ge, S. X., Son, E. W., & Yao, R. (2018). iDEP: an integrated web application for differential expression and pathway analysis of RNA-Seq data. BMC bioinformatics, 19, 1-24.  
+Kim, D., Langmead, B., & Salzberg, S. L. (2015). HISAT: a fast spliced aligner with low memory requirements. Nature methods, 12(4), 357-360.  
+SRA Toolkit Development Team. SRA Toolkit. https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software.  
+Pertea, G., & Pertea, M. (2020). GFF utilities: GffRead and GffCompare. F1000Research, 9.  
+
+
