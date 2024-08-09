@@ -8,7 +8,7 @@ It's a common strategy to analyze RNA-seq data of samples with different treatme
 ## Results
 (1). "With exposure" samples is similar to "Without exposure" ones, while "Reference" ones show different pattern compared to the others (see Figiure 1, 2 and 3).  
 (2). Up-regulated differential expressed genes are mainly associated to molecular transportation, detoxification, ubiquitination and hydrolase/proteolysis, while down-regulated ones are associated to ATPase, peptidase inhibitor and reduction of peroxides.  
-(3). Up-regulated pathways are mainly associated to membrane of cells/organelles (cellular component), glucan/ATP biosynthetic process (biological process), UDP-glycosyltransferase/monooxygenase/aspartic-type-peptidase activity (molecular function) and drug/glutathione/pyruavte metabolism (KEGG); down-regulated pathways  are mainly associated to cytoplasma/Golgi stack  (cellular component), mannosylation/DNA-topological-change (biological process), 
+(3). Up-regulated pathways are mainly associated to membrane of cells/organelles (cellular component), glucan/ATP biosynthetic process (biological process), UDP-glycosyltransferase/monooxygenase/aspartic-type-peptidase activity (molecular function) and drug/glutathione/pyruavte metabolism (KEGG); down-regulated pathways  are mainly associated to cytoplasma/Golgi stack  (cellular component), mannosylation/DNA-topological-change (biological process), acyl-CoA/pigment binding (molecular function) and N-glycan-metabolism/autophagy (KEGG).
 
 ### Figure 1. Heatmap
 Hierarchical clustering    |  K-means clustering
