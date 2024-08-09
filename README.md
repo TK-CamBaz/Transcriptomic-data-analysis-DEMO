@@ -3,12 +3,13 @@
 It's a common strategy to analyze RNA-seq data of samples with different treatments (_e.g._ Resistance vs Susceptible) to identify gene expression profile, find key genes and biological pathways. Here, a simple case of mining resistance-related genes and pathways using RNA-seq data of _Tetranychus urticae_ is presented. 
 
 ## Workflow
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="400">
+<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="450">
 
 ## Results
-(1). "With exposure" samples is similar to "Without exposure" ones, while "Reference" ones show different pattern compared to the others (see Figiure 1, 2 and 3).  
-(2). Up-regulated differential expressed genes are mainly associated to molecular transportation, detoxification, ubiquitination and hydrolase/proteolysis, while down-regulated ones are associated to ATPase, peptidase inhibitor and reduction of peroxides (see Table 1).  
-(3). Up-regulated pathways are mainly associated to membrane of cells/organelles (cellular component), glucan/ATP biosynthetic process (biological process), UDP-glycosyltransferase/monooxygenase/aspartic-type-peptidase activity (molecular function) and drug/glutathione/pyruavte metabolism (KEGG); down-regulated pathways  are mainly associated to cytoplasma/Golgi stack  (cellular component), mannosylation/DNA-topological-change (biological process), acyl-CoA/pigment binding (molecular function) and N-glycan-metabolism/autophagy (KEGG) (see Table 2).
+(1). Expression patterns of "With exposure"(WE) samples is similar to ones of "Without exposure"(WOE) , while "Reference"(Ref) shows distinct difference compared to the others (see Figiure 1).  
+(2). Little difference is observed between WE_Ref and WOE_Ref in , wihch also suggests the similarity between WE and WOE.  
+(3). Up-regulated differential expressed genes are mainly associated to molecular transportation, detoxification, ubiquitination and hydrolase/proteolysis, while down-regulated ones are associated to ATPase, peptidase inhibitor and reduction of peroxides (see Table 1).  
+(4). Up-regulated pathways are mainly associated to membrane of cells/organelles (cellular component), glucan/ATP biosynthetic process (biological process), UDP-glycosyltransferase/monooxygenase/aspartic-type-peptidase activity (molecular function) and drug/glutathione/pyruavte metabolism (KEGG); down-regulated pathways  are mainly associated to cytoplasma/Golgi stack  (cellular component), mannosylation/DNA-topological-change (biological process), acyl-CoA/pigment binding (molecular function) and N-glycan-metabolism/autophagy (KEGG) (see Table 2).
 
 ### Figure 1. Heatmap
 Hierarchical clustering    |  K-means clustering
@@ -21,7 +22,7 @@ Hierarchical clustering    |  K-means clustering
 ### Figure 3. Volcano plot
 With Exposure vs Reference  |  Without Exposure vs Reference
 :-------------------------:|:-------------------------:
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_ref.png" height=250>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_woe_ref.png" height=250>
+<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_ref.png" height=200>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_woe_ref.png" height=200>
 
 ### Table 1. Top 5 up/down regulated differential expressed genes for each comparison
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/top5function_for_updown.png" height=250>
