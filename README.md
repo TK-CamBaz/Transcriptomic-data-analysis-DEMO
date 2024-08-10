@@ -6,7 +6,7 @@ It's a common strategy to analyze RNA-seq data of samples with different treatme
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="450">
 
 Data source:  
-RNAseq data: From NCBI (Accession: PRJNA946758)  
+RNAseq data: From NCBI (Accession: PRJNA946758).  
 Reference genome: From https://figshare.com/articles/dataset/Chromosome-level_genome_assembly_of_the_two-spotted_spider_mite_i_Tetranychus_urticae_i_/25241794/1.  
 GFF file: Same as Reference genome.  
 Desination table: Self-made .csv or .txt file, following the format of "Experiment design file" in iDEP.
