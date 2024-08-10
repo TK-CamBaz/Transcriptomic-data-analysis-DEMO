@@ -62,4 +62,4 @@ Ge, S. X., Son, E. W., & Yao, R. (2018). iDEP: an integrated web application for
 Kim, D., Langmead, B., & Salzberg, S. L. (2015). HISAT: a fast spliced aligner with low memory requirements. _Nature Methods_, 12(4), 357-360.  
 Pertea, G., & Pertea, M. (2020). GFF utilities: GffRead and GffCompare. _F1000Research_, 9.  
 SRA Toolkit Development Team. SRA Toolkit. https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software.  
-Wei, Shu-Jun; Cao, Li-Jun (2024). Chromosome-level genome assembly of the two-spotted spider mite Tetranychus urticae. figshare. Dataset. https://doi.org/10.6084/m9.figshare.25241794.v1.  
+Wei, Shu-Jun; Cao, Li-Jun (2024). Chromosome-level genome assembly of the two-spotted spider mite Tetranychus urticae. _figshare_. Dataset. https://doi.org/10.6084/m9.figshare.25241794.v1.  
