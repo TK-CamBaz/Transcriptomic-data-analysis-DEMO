@@ -1,4 +1,4 @@
-詳細分析流程
+分析流程
 @@ 於下方提到的軟體或擴充套件如遇安裝問題，請自行解決。
 @@ 如對指令內的引數(arguments)有疑問，也請自行查詢。
 
@@ -74,12 +74,19 @@ htseq-count -q -f bam -s no -i gene_id SRR23919699.bam tu_evm_out.gtf > SRR23919
 """
 重複上述步驟，得到所有樣本的count檔，利用excel或其他軟體(R或python等)將檔案合併。
 
-3. 序列代號轉換成基因代號
-**若gff檔中的ID已經是有效的基因代號，則可省略此步驟。
-
+(5)獲取記數矩陣
 在合併count檔後獲得的文件檔中，第一欄為轉錄本的序列代號，並非有效的基因代號(Gene ID)，因此需要先利用線上資料庫將序列代號轉換為基因代號。首先用全基因組序列和全基因組註解(這裡要用gtf)將各轉錄本的序列取出：
 """
 gffread -w transcripts.fa -g tu.genome.ipm_v2.fasta tu_evm_out.gtf
 """
+接著使用eggNOG-mapper(http://eggnog-mapper.embl.de/)，選擇CDS後將轉錄本序列檔案(transcripts.fa)上傳，輸入欲收到檔案的email網址後點選提交(Submit)，待比對完成後下載csv檔(選取csv，下載後的檔案副檔名是tsv，但不影響檔案內容)，接著執行Merge.annotation.counts.R(或使用Excel的vlookup指令)，得到的檔案即為記數矩陣(count matrix)。
 
-接著使用eggNOG-mapper(http://eggnog-mapper.embl.de/)，選擇CDS後將轉錄本序列檔案(transcripts.fa)上傳，輸入欲收到檔案的email網址後點選提交(Submit)，待比對完成後下載csv檔(選取csv，下載後的檔案副檔名是tsv，但不影響檔案內容)。
+3. 用iDEP分析記數矩陣
+iDEP是專為分析RNA-seq資料而設計的網頁工具，包含常用的分析方法，例如資料探勘、差異表達基因分析、過表達分析及基因組富集分析。除了上傳記數矩陣，另可製備實驗設計檔一併上傳，其格式可點選Info查看。而本次的實驗材料為二點葉蟎，須在Species處選取正確的物種。
+(1)前處理：點選Pre-Process，點選各按鈕可查看Read counts在樣本中的分佈。在表現量數值轉換選擇rlog可讓同一處理下的樣本有更好的相關性？
+(2)聚類分析：點選Clustering，該分析下有兩個選項，分別是階層式聚類及kmeans聚類。聚類結果以熱點圖呈現各樣本的基因表現量圖譜(expression profile)，亦可在感興趣的位置圈選矩形，在右方會生成子熱點圖(sub-heatmap)，除可更進一步觀察圖譜，子圖上還會列出基因名稱，方便後續紀錄與查找。
+(3)主成份分析：點選PCA，觀察樣本間相似程度，另有其他降維方法可供選擇。
+(4)差異表達基因分析：點選DEG1，選取欲比較的組合後點選提交，完成後會以長條圖及表格呈現各組合的上調與下調差異表達基因數量，結果可點選Result & data下載。
+(5)差異表達基因呈現與過表達分析：點選DEG2，有熱點圖、火山圖、MA圖及散佈圖可供觀察差異表達基因在全基因組中的分佈情形。選取Enrichment可執行富集分析(準確來說是過表達分析over-representation analysis)，左邊可選取欲分析的組合，該組合的差異表達基因將作為基因集(gene list)，並與所選擇的資料庫內的生合成途徑(gene set)進行超幾何分佈檢驗，校正後p值(FDR)小於0.05的途徑會被留下。
+(6)途徑分析：點選Pathway，左邊可選取欲分析的組合，該組合的「所有基因」都會被納入分析，並與所選擇的資料庫內的生合成途徑進行基因集富集分析(Gene-set enrichment analysis, GSEA)或是其他方法。校正後p值(FDR)小於所選擇閾值的途徑會被留下。
+**另有其他分析方法(Genome、Bicluster及Network)沒有在此列出，有興趣者可自行嘗試。
