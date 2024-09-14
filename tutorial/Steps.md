@@ -3,7 +3,7 @@
 @@ 如對指令內的引數(arguments)有疑問，也請自行查詢。
 
 1. 準備資料
-在此專案中，我準備3份檔案，分別為RNA-seq資料、全基因組序列以及全基因組註解。資料來源為NCBI (accession: PRJNA946758)以及Figshare (https://figshare.com/articles/dataset/Chromosome-level_genome_assembly_of_the_two-spotted_spider_mite_i_Tetranychus_urticae_i_/25241794/1)。RNA-seq資料包含12個sra檔，包含各樣本的轉錄體資料，定序平台為Illumina NovaSeq 6000，layout為雙端定序。試驗設計為3個處理組:不接觸藥劑的感性二點葉蟎品系、持續接觸藥劑的抗性二點葉蟎品系以及不接觸藥劑的抗性二點葉蟎品系，每個處理有4個重複，其中感性品系為倫敦對照品系(London reference strain)，抗性品系為FP9品系(對亞醌蟎acequinocyl及必芬蟎bifenazate具高度抗性)，接觸藥劑為亞醌蟎。全基因組序列為二點葉蟎的基因體序列，組裝至染色體等級，為fasta檔。全基因組註解為二點葉蟎之編碼序列(CDS)在基因體上的位置，為gff檔。sra檔可用sra-tookit中的prefetch進行下載：
+在此專案中，我準備3份檔案，分別為轉錄體資料、全基因組序列以及全基因組註解。資料來源為NCBI (accession: PRJNA946758)以及Figshare (https://figshare.com/articles/dataset/Chromosome-level_genome_assembly_of_the_two-spotted_spider_mite_i_Tetranychus_urticae_i_/25241794/1)。轉錄體資料包含12個sra檔，包含各樣本的轉錄體資料，定序平台為Illumina NovaSeq 6000，layout為雙端定序。試驗設計為3個處理組:不接觸藥劑的感性二點葉蟎品系、持續接觸藥劑的抗性二點葉蟎品系以及不接觸藥劑的抗性二點葉蟎品系，每個處理有4個重複，其中感性品系為倫敦對照品系(London reference strain)，抗性品系為FP9品系(對亞醌蟎acequinocyl及必芬蟎bifenazate具高度抗性)，接觸藥劑為亞醌蟎。全基因組序列為二點葉蟎的基因體序列，組裝至染色體等級，為fasta檔。全基因組註解為二點葉蟎之編碼序列(CDS)在基因體上的位置，為gff檔。sra檔可用sra-tookit中的prefetch進行下載：
 以SRX19731018為例：
 """
 prefetch SRX19731018
@@ -11,7 +11,7 @@ prefetch SRX19731018
 而全基因組序列及全基因組註解則直接至該網址下載即可。
 
 2. 資料前處理
-(1)將sra檔內的fastq檔取出並處理乾淨
+(1)將sra檔內的fastq檔取出並執行品質管理
 首先將sra檔解壓縮並使用sra-tookit中的parallel-fastq-dump提取裡面的fastq檔：
 以SRX19731018.sra為例：
 """
