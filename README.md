@@ -1,6 +1,6 @@
 # Transcriptomic-data-analysis-DEMO
 ## Overview
-It's a common strategy to analyze Transcriptomic data of samples with different treatments (_e.g._ Resistance vs Susceptible) to identify gene expression profile, find key genes and infer related biological pathways. Here, a simple case of mining acaricide resistance-related genes and pathways using transcriptomic data of _Tetranychus urticae_ is presented. 
+It is a common strategy to analyze transcriptomic data from samples subjected to different treatments (e.g., resistant vs. susceptible) in order to identify gene expression profiles, discover key genes, and infer related biological pathways. Here, a straightforward case of mining acaricide resistance-related genes and pathways using the transcriptomic data of Tetranychus urticae is presented.
 
 ## Workflow
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="450">
