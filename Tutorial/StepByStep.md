@@ -1,7 +1,4 @@
 # 分析流程  
-@@ 於下方提到的軟體或擴充套件如遇安裝問題，請自行解決。  
-@@ 如對指令內的引數(arguments)有疑問，也請自行查詢。
-
 ## 1. 準備資料
 在此專案中，我準備3份檔案，分別為轉錄體資料、全基因組序列以及全基因組註解。資料來源為NCBI (accession: PRJNA946758)以及Figshare (https://figshare.com/articles/dataset/Chromosome-level_genome_assembly_of_the_two-spotted_spider_mite_i_Tetranychus_urticae_i_/25241794/1) 。轉錄體資料包含12個sra檔，包含各樣本的轉錄體資料，定序平台為Illumina NovaSeq 6000，layout為雙端定序。試驗設計為3個處理組:不接觸藥劑的感性二點葉蟎品系、持續接觸藥劑的抗性二點葉蟎品系以及不接觸藥劑的抗性二點葉蟎品系，每個處理有4個重複，其中感性品系為倫敦對照品系(London reference strain)，抗性品系為FP9品系(對亞醌蟎acequinocyl及必芬蟎bifenazate具高度抗性)，接觸藥劑為亞醌蟎。全基因組序列為二點葉蟎的基因體序列，組裝至染色體等級，為fasta檔。全基因組註解為二點葉蟎之編碼序列(CDS)在基因體上的位置，為gff檔。sra檔可用sra-tookit中的prefetch進行下載：
 以SRX19731018為例：  
@@ -91,7 +88,7 @@ gffread -w transcripts.fa -g tu.genome.ipm_v2.fasta tu_evm_out.gtf
 ## 3. 用iDEP分析記數矩陣
 iDEP是專為分析RNA-seq資料而設計的網頁工具，包含常用的分析方法，例如資料探勘、差異表達基因分析、過表達分析及基因組富集分析。除了上傳記數矩陣，另可製備實驗設計檔一併上傳，其格式可點選Info查看。而本次的實驗材料為二點葉蟎，須在Species處選取正確的物種。  
 ### (1) 前處理
-點選Pre-Process，點選各按鈕可查看Read counts在樣本中的分佈。在表現量數值轉換選擇rlog可讓同一處理下的樣本有更好的相關性？  
+點選Pre-Process，點選各按鈕可查看Read counts在樣本中的分佈。在表現量數值轉換選擇rlog可讓同一處理下的樣本有更好的相關性。  
 ### (2) 聚類分析
 點選Clustering，該分析下有兩個選項，分別是階層式聚類及kmeans聚類。聚類結果以熱點圖呈現各樣本的基因表現量圖譜(expression profile)，亦可在感興趣的位置圈選矩形，在右方會生成子熱點圖(sub-heatmap)，除可更進一步觀察圖譜，子圖上還會列出基因名稱，方便後續紀錄與查找。  
 ### (3) 主成份分析
