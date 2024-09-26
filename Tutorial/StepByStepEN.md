@@ -23,19 +23,19 @@ For example, with SRR23919699:
 cd ~/AfterQC-0.9.7
 pypy after.py -1 SRR23919699_1.fastq -2 SRR23919699_2.fastq
 ```
-The output includes three directories: good, bad, and QC. The fq files in the good folder are the cleaned sequences, the fq files in the bad folder are the removed sequences, and the HTML files in the QC folder are the reports that compare the sequences before and after cleaning.
+The output includes three directories: good, bad, and QC. The fq files in the good folder are the clean reads, the fq files in the bad folder are the removed reads, and the HTML files in the QC folder are the reports that compare the sequences before and after cleaning.
 
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/AfterQC_partial_res.png" width="450">
 
 ### (2) Build a whole genome index
-The purpose of this step is to speed up the subsequent sequence alignment process, which is done using HISAT2.  
+The purpose of this step is to speed up the sequence mapping process, which is done using HISAT2.  
 For example, with tu.genome.ipm_v2.fasta:
 ```
 hisat2-build -p 8 tu.genome.ipm_v2.fasta index/tu.genome_index
 ```
 The output is a directory named tu.genome_index, containing eight H2 files.
 
-### (3) Align sequences to the reference genome
+### (3) Mapping sequences to the reference genome
 Use HISAT2 for this step.  
 For example, with SRR23919699_1.good.fq and SRR23919699_2.good.fq:
 ```
@@ -43,7 +43,7 @@ hisat2 -t -p 2 -x index/tu.genome_index -1 SRR23919699_1.good.fq -2 SRR23919699_
 ```
 The output is a SAM file.
 
-Next, convert the sam file to a BAM file. This step is a format conversion that significantly reduces the file size without altering its content.
+Next, convert the SAM file to a BAM file. This step is a format conversion that significantly reduces the file size without altering its content.
 Use samtools for this step.  
 For example, with SRR23919699.sam:
 ```
@@ -51,7 +51,7 @@ samtools sort -@2 -m 200M -o SRR23919699.bam SRR23919699.sam
 ```
 The output is a BAM file.
 
-Then, use qualimap to check the alignment results:
+Then, use qualimap to check the mapping results:
 ```
 cd ~/qualimap_v2.3
 ./qualimap
@@ -62,7 +62,7 @@ After the window opens, select the BAM file for analysis. Once complete, a repor
 
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/qualimap_res.png" width="450">
 
-You can also generate a BAI file from the BAM file, which can be loaded into IGV (Integrative Genomics Viewer) along with the BAM file for visualizing the alignment results: 
+You can also generate a BAI file from the BAM file, which can be loaded into IGV (Integrative Genomics Viewer) along with the BAM file for visualizing the mapping results: 
 ```
 samtools index SRR23919699.bam SRR23919699.bai
 ```
@@ -77,7 +77,7 @@ Select the BAM file and the whole genome sequence. Make sure the BAM file and BA
 
 <img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/igv_res.png" width="450">
 
-### (4) Quantify the transcripts in each sample after sequence alignment
+### (4) Quantify the transcripts in each sample after sequence mapping
 This step requires the BAM file and a GTF file. First, convert the whole genome annotation GFF file to a gtf file using gffread:
 For example, with tu_evm_out.gff3:
 ```
