@@ -5,14 +5,16 @@ It is a common strategy to analyze transcriptomic data from samples subjected to
 ## Workflow
 <img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="450">
 
+Data in **bold** are acquired from online database or made following the format.
+
 Data source:  
-RNAseq data: From NCBI (Accession: PRJNA946758).  
+Transcriptomic data: From NCBI (Accession: PRJNA946758).  
 Reference genome: From https://figshare.com/articles/dataset/Chromosome-level_genome_assembly_of_the_two-spotted_spider_mite_i_Tetranychus_urticae_i_/25241794/1.  
 GFF file: Same as Reference genome.  
 Desination table: Self-made .csv or .txt file, following the format of "Experiment design file" in iDEP.
 
 ## Results
-(1). Expression patterns of "With exposure" (WE) samples is similar to ones of "Without exposure" (WOE) , while "Reference" (Ref) shows distinct difference compared to the others (see Figiure 1).  
+(1). Expression patterns of "With exposure" (WE) samples are similar to ones of "Without exposure" (WOE) , while "Reference" (Ref) shows distinct difference compared to the others (see Figiure 1).  
 (2). Little difference is observed between WE_Ref and WOE_Ref, wihch also suggests the similarity between WE and WOE (see Figiure 2, 3 and Table 1).  
 (3). Up-regulated differential expressed genes are mainly associated to molecular transportation, detoxification, ubiquitination and hydrolase/proteolysis, while down-regulated ones are associated to ATPase, peptidase inhibitor and reduction of peroxides (see Table 1).  
 (4). Up-regulated pathways are mainly associated to membrane of cells/organelles (cellular component), glucan/ATP biosynthetic process (biological process), UDP-glycosyltransferase/monooxygenase/aspartic-type-peptidase activity (molecular function) and drug/glutathione/cytochrome-P450 metabolism (KEGG); down-regulated pathways are mainly associated to cytoplasma/Golgi stack  (cellular component), DNA topological change (biological process), various-transferase/DNA-topoisomerase (molecular function) and N-glycan-metabolism/autophagy (KEGG) (see Table 2).  
