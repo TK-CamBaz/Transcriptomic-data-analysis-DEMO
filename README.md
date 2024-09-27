@@ -1,9 +1,9 @@
 # Transcriptomic-data-analysis-DEMO
 ## Overview
-It is a common strategy to analyze transcriptomic data from samples subjected to different treatments (_e.g._, resistant vs. susceptible) in order to identify gene expression profiles, discover key genes, and infer related biological pathways. Here, a straightforward case of mining acaricide resistance-related genes and pathways using the transcriptomic data of Tetranychus urticae is presented.
+It is a common strategy to analyze transcriptomic data from samples subjected to different treatments (e.g., resistant vs. susceptible) in order to identify gene expression profiles, discover key genes, and infer related biological pathways. Here, a straightforward case of mining acaricide resistance-related genes and pathways using the transcriptomic data of Tetranychus urticae is presented.
 
 ## Workflow
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="450">
 
 Data source:  
 RNAseq data: From NCBI (Accession: PRJNA946758).  
@@ -20,31 +20,31 @@ Desination table: Self-made .csv or .txt file, following the format of "Experime
 ### Figure 1. Heatmap
 Hierarchical clustering    |  K-means clustering
 :-------------------------:|:-------------------------:
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_H.png"  height=250>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/heatmap_K.png" height=250>
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/heatmap_H.png"  height=250>|<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/heatmap_K.png" height=250>
 
 ### Figure 2. Differential expressed genes bar chart
 Conditions: FDR <= 0.05 & Log(FC) >=2.  
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/sig_gene_stats.png"  height=250>
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/sig_gene_stats.png"  height=250>
 
 ### Figure 3. Volcano plot
 Conditions: FDR <= 0.05 & Log(FC) >=2.  
 
 With Exposure vs Reference  |  Without Exposure vs Reference
 :-------------------------:|:-------------------------:
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_ref.png" height=200>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_woe_ref.png" height=200>
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_ref.png" height=200>|<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_woe_ref.png" height=200>
 
 ### Table 1. Top 5 up/down regulated differential expressed genes for each comparison
 Conditions: Ranked by log(FC).  
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/top5function_for_updown.png" height=250>
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/top5function_for_updown.png" height=250>
 
 ### Table 2. Up/down regulated pathways for each comparison
 Conditions: Ranked by FDR.
 
 Over-representation analysis    |  Gene set enrichment analysis
 :-------------------------:|:-------------------------:
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/pathway_ora.png" height=150>|<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/FigureTable/pathway_gesa.png" height=150>
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/pathway_ora.png" height=150>|<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/pathway_gesa.png" height=150>
 
 ## Note
 In this demo, I use three packages/web tools to improve the workflow of the analysis: 

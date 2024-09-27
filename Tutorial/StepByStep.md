@@ -26,7 +26,7 @@ pypy after.py -1 SRR23919699_1.fastq -2 SRR23919699_2.fastq
 ```
 輸出資料包括三個資料夾：good、bad及QC，good中的fq檔即為清洗後的乾淨序列，bad中的fq檔為被移除的序列，QC內的html檔為各序列清理前後的報表，可檢查序列清理前後的差別。  
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/AfterQC_partial_res.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/AfterQC_partial_res.png" width="450">
 
 ### (2) 建立全基因組索引
 目的為加快後續序列比對的速度，使用HISAT2來執行。  
@@ -57,11 +57,11 @@ samtools sort -@2 -m 200M -o SRR23919699.bam SRR23919699.sam
 cd ~/qualimap_v2.3
 ./qualimap
 ```
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/qualimap_GUI.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/qualimap_GUI.png" width="450">
 
 待視窗開啟後，選取bam檔進行分析，完成後會顯示報表，亦可輸出成pdf或html。
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/qualimap_res.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/qualimap_res.png" width="450">
 
 另外還可用bam檔生成bai檔，此檔案可與bam檔一起輸入IGV(Integrative Genomics Viewer)中將比對結果視覺化呈現：  
 ```
@@ -71,11 +71,11 @@ samtools index SRR23919699.bam SRR23919699.bai
 ```
 igv
 ```
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/igv_GUI.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/igv_GUI.png" width="450">
 
 選取bam檔和全基因組序列，注意bam檔與bai檔須放在同一路徑下。
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/igv_res.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/igv_res.png" width="450">
 
 ### (4) 計算各樣本的轉錄本在序列比對後的數量
 該步驟需要bam檔與gtf檔，先對全基因組註解的gff檔使用gffread進行轉換：  
@@ -97,52 +97,52 @@ gffread -w transcripts.fa -g tu.genome.ipm_v2.fasta tu_evm_out.gtf
 ```
 接著使用eggNOG-mapper (http://eggnog-mapper.embl.de/) ，選擇CDS後將轉錄本序列檔案(transcripts.fa)上傳，輸入欲收到檔案的email網址後點選提交(Submit)。
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/emapper_UI.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/emapper_UI.png" width="450">
 
 待比對完成後下載csv檔(選取csv，下載後的檔案副檔名是tsv，但不影響檔案內容)，接著執行Merge.annotation.counts.R(或使用Excel的vlookup指令)，得到的檔案即為記數矩陣(count matrix)。 
 
 ## 3. 用iDEP分析記數矩陣
 iDEP是專為分析RNA-seq資料而設計的網頁工具，包含常用的分析方法，例如資料探勘、差異表達基因分析、過表達分析及基因組富集分析。除了上傳記數矩陣，另可製備實驗設計檔一併上傳，其格式可點選Info查看。而本次的實驗材料為二點葉蟎，須在Species處選取正確的物種。  
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_UI.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_UI.png" width="450">
 
 ### (1) 前處理
 點選Pre-Process，點選各按鈕可查看Read counts在樣本中的分佈。在表現量數值轉換選擇rlog可讓同一處理下的樣本有更好的相關性。  
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_preprocess.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_preprocess.png" width="450">
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_preprocess_2.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_preprocess_2.png" width="450">
 
 ### (2) 聚類分析
 點選Clustering，該分析下有兩個選項，分別是階層式聚類及kmeans聚類。聚類結果以熱點圖呈現各樣本的基因表現量圖譜(expression profile)，亦可在感興趣的位置圈選矩形，在右方會生成子熱點圖(sub-heatmap)，除可更進一步觀察圖譜，子圖上還會列出基因名稱，方便後續紀錄與查找。  
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_clustering.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_clustering.png" width="450">
 
 ### (3) 主成份分析
 點選PCA，觀察樣本間相似程度，另有其他降維方法可供選擇。  
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_Dimension_reduction.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_Dimension_reduction.png" width="450">
 
 ### (4) 差異表達基因分析
 點選DEG1，選取欲比較的組合後點選提交，完成後會以長條圖及表格呈現各組合的上調與下調差異表達基因數量，結果可點選Result & data下載。  
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG.png" width="450">
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG_2.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG_2.png" width="450">
 
 ### (5) 差異表達基因呈現與過表達分析
 點選DEG2，有熱點圖、火山圖、MA圖及散佈圖可供觀察差異表達基因在全基因組中的分佈情形。
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG_3.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG_3.png" width="450">
 
 選取Enrichment可執行富集分析(準確來說是過表達分析over-representation analysis)，左邊可選取欲分析的組合，該組合的差異表達基因將作為基因集(gene list)，並與所選擇的資料庫內的生合成途徑(gene set)進行超幾何分佈檢驗，校正後p值(FDR)小於0.05的途徑會被留下。  
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_ORA.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_ORA.png" width="450">
 
 ### (6) 途徑分析
 點選Pathway，左邊可選取欲分析的組合，該組合的「所有基因」都會被納入分析，並與所選擇的資料庫內的生合成途徑進行基因集富集分析(Gene-set enrichment analysis, GSEA)或是其他方法。校正後p值(FDR)小於所選擇閾值的途徑會被留下。  
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_GSEA.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_GSEA.png" width="450">
 
 
 **另有其他分析方法(Genome、Bicluster及Network)沒有在此列出，有興趣者可自行嘗試。  

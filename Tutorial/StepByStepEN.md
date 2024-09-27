@@ -25,7 +25,7 @@ pypy after.py -1 SRR23919699_1.fastq -2 SRR23919699_2.fastq
 ```
 The output includes three directories: good, bad, and QC. The fq files in the good folder are the clean reads, the fq files in the bad folder are the removed reads, and the HTML files in the QC folder are the reports that compare the sequences before and after cleaning.
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/AfterQC_partial_res.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/AfterQC_partial_res.png" width="450">
 
 ### (2) Build a whole genome index
 The purpose of this step is to speed up the sequence mapping process, which is done using HISAT2.  
@@ -56,11 +56,11 @@ Then, use qualimap to check the mapping results:
 cd ~/qualimap_v2.3
 ./qualimap
 ```
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/qualimap_GUI.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/qualimap_GUI.png" width="450">
 
 After the window opens, select the BAM file for analysis. Once complete, a report will be displayed, which can also be exported as a PDF or HTML.
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/qualimap_res.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/qualimap_res.png" width="450">
 
 You can also generate a BAI file from the BAM file, which can be loaded into IGV (Integrative Genomics Viewer) along with the BAM file for visualizing the mapping results: 
 ```
@@ -71,11 +71,11 @@ Then open IGV:
 igv
 ```
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/igv_GUI.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/igv_GUI.png" width="450">
 
 Select the BAM file and the whole genome sequence. Make sure the BAM file and BAI file are in the same directory.
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/igv_res.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/igv_res.png" width="450">
 
 ### (4) Quantify the transcripts in each sample after sequence mapping
 This step requires the BAM file and a GTF file. First, convert the whole genome annotation GFF file to a gtf file using gffread:
@@ -97,49 +97,49 @@ gffread -w transcripts.fa -g tu.genome.ipm_v2.fasta tu_evm_out.gtf
 ```
 Then, use eggNOG-mapper (http://eggnog-mapper.embl.de/), select CDS, upload the transcript sequence file (transcripts.fa), provide your email, and click Submit. Once the comparison is complete, download the csv file (select csv; although the downloaded file has a tsv extension, the content is not affected). Then, use Merge.annotation.counts.R (or Excel's vlookup function) to generate the count matrix file.
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/emapper_UI.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/emapper_UI.png" width="450">
 
 ## 3. Analyze the count matrix using iDEP
 iDEP is a web tool designed for RNA-seq data analysis, offering common analysis methods such as data exploration, differential gene expression analysis, over-representation analysis, and gene set enrichment analysis. Besides uploading the count matrix, you can also prepare and upload an experimental design file. The format can be checked by clicking Info. In this experiment, the material used is the two-spotted spider mite, so make sure to select the correct species in the Species section. 
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_UI.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_UI.png" width="450">
 
 ### (1) Preprocessing
 Click Pre-Process, and each button allows you to view the distribution of Read counts across samples. Selecting rlog for expression value transformation helps to improve the correlation among samples under the same treatment. 
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_preprocess.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_preprocess.png" width="450">
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_preprocess_2.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_preprocess_2.png" width="450">
 
 ### (2) Clustering analysis
 Click Clustering. Two options are available: hierarchical clustering and k-means clustering. The clustering results are presented as a heatmap showing the gene expression profiles of each sample. You can select regions of interest on the heatmap to generate a sub-heatmap, which allows further investigation of the expression profiles. The sub-heatmap also lists gene names for easy tracking and recording.
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_clustering.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_clustering.png" width="450">
 
 ### (3) Principal component analysis
 Click PCA to observe the similarity between samples. Other dimensionality reduction methods are also available.  
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_Dimension_reduction.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_Dimension_reduction.png" width="450">
 
 ### (4) Differential gene expression analysis
 Click DEG1, select the comparison groups, and click Submit. The results are displayed as bar plots and tables showing the number of upregulated and downregulated differentially expressed genes in each comparison. The results can be downloaded from the Result & data section. 
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG.png" width="450">
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG_2.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG_2.png" width="450">
 
 ### (5) Differential gene expression visualization and over-representation analysis
 Click DEG2. You can observe the distribution of differentially expressed genes across the genome using heatmaps, volcano plots, MA plots, and scatter plots. 
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG_3.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_DEG_3.png" width="450">
 
 Select Enrichment to perform over-representation analysis. On the left, choose the group to analyze. The differentially expressed genes in this group will be treated as a gene list and compared to the selected gene sets from the database using a hypergeometric test. Pathways with an adjusted p-value (FDR) of less than 0.05 will be retained. 
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_ORA.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_ORA.png" width="450">
 
 ### (6) Pathway analysis
 Click Pathway. On the left, choose the group to analyze. All genes in the selected group will be included in the analysis and compared to the selected gene sets from the database using gene set enrichment analysis (GSEA) or other methods. Pathways with an adjusted p-value (FDR) below the chosen threshold will be retained. 
 
-<img src="https://github.com/TK-CamBaz/RNA-seq-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_GSEA.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Tutorial/Figure/iDEP_GSEA.png" width="450">
 
 **Other analysis methods (Genome, Bicluster, and Network) are also available but are not listed here. Feel free to explore them if interested. 
