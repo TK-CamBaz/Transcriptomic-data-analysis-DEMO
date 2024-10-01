@@ -3,9 +3,9 @@
 It is a common strategy to analyze transcriptomic data from samples subjected to different treatments (e.g., resistant vs. susceptible) in order to identify gene expression profiles, discover key genes, and infer related biological pathways. Here, a straightforward case of mining acaricide resistance-related genes and pathways using the transcriptomic data of Tetranychus urticae is presented.
 
 ## Workflow
-<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/flowchart.png" width="450">
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Contents/flowchart.png" width="450">
 
-Data in **bold** are acquired from online database or made following the format.
+Data in **bold** format are acquired from online database or made following the format.
 
 Data source:  
 Transcriptomic data: From NCBI (Accession: PRJNA946758).  
@@ -14,15 +14,42 @@ GFF file: Same as Reference genome.
 Desination table: Self-made .csv or .txt file, following the format of "Experiment design file" in iDEP.
 
 ## Results
-(1). Expression patterns of "With exposure" (WE) samples are similar to ones of "Without exposure" (WOE) , while "Reference" (Ref) shows distinct difference compared to the others (see Figiure 1).  
+(1) Preprocessing:  
+Little bias was observed in the raw read counts, and the distribution of rlog-transformed data was consistent across samples and treatments.    
+
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Contents/raw_counts_barplot.png" width="450">
+
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Contents/transformed_boxplot.png" width="450">
+
+(2) Clustering analysis:  
+The expression patterns of "WITHEXPOSURE" (WE) samples were similar to those of "WITHOUTEXPOSURE" (WOE), while "REFERENCE" (REF) exhibited a distinct difference compared to the others.  
+
+Hierarchical clustering    |  K-means clustering
+:-------------------------:|:-------------------------:
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Contents/heatmap_main_H.png"  height=250>|<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Contents/heatmap_main_K.png" height=250>
+
+(3) Principal component analysis (PCA)  
+In the results of the PCA, WE and WOE were clustered on the right side, while REF was positioned on the left side. This arrangement revealed a distinct pattern, indicating that REF was different from WE and WOE, whereas a subtle difference existed between WE and WOE.
+
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Contents/pca_plot.png" width="450">
+
+(4) Differential expression analysis  
+In the comparison between WE and REF, 781 up-regulated genes and 500 down-regulated genes were identified based on statistical thresholds (log fold change ≥ 2 and FDR ≤ 0.05). In contrast, the comparison of WOE and REF revealed 787 up-regulated genes and 500 down-regulated genes using the same criteria.   
+
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Contents/sig_gene_stats.png" width="450">
+
+The volcano plots of the two comparison were shown below. 
+
+WITHEXPOSURE vs REFERENCE  |  WiITHOUTEXPOSURE vs REFERENCE
+:-------------------------:|:-------------------------:
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Contents/volcano_plot_WE_REF.png" width="250">|<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Contents/volcano_plot_WOE_REF.png" width="250">
+
 (2). Little difference is observed between WE_Ref and WOE_Ref, wihch also suggests the similarity between WE and WOE (see Figiure 2, 3 and Table 1).  
 (3). Up-regulated differential expressed genes are mainly associated to molecular transportation, detoxification, ubiquitination and hydrolase/proteolysis, while down-regulated ones are associated to ATPase, peptidase inhibitor and reduction of peroxides (see Table 1).  
 (4). Up-regulated pathways are mainly associated to membrane of cells/organelles (cellular component), glucan/ATP biosynthetic process (biological process), UDP-glycosyltransferase/monooxygenase/aspartic-type-peptidase activity (molecular function) and drug/glutathione/cytochrome-P450 metabolism (KEGG); down-regulated pathways are mainly associated to cytoplasma/Golgi stack  (cellular component), DNA topological change (biological process), various-transferase/DNA-topoisomerase (molecular function) and N-glycan-metabolism/autophagy (KEGG) (see Table 2).  
 
 ### Figure 1. Heatmap
-Hierarchical clustering    |  K-means clustering
-:-------------------------:|:-------------------------:
-<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/heatmap_H.png"  height=250>|<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/heatmap_K.png" height=250>
+
 
 ### Figure 2. Differential expressed genes bar chart
 Conditions: FDR <= 0.05 & Log(FC) >=2.  
