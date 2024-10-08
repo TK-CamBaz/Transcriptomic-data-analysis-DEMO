@@ -1,6 +1,6 @@
 # Transcriptomic-data-analysis-DEMO
 ## Overview
-It is a common strategy to analyze transcriptomic data from samples subjected to different treatments (e.g., resistant vs. susceptible) in order to identify gene expression profiles, discover key genes, and infer related biological pathways. Here, a straightforward case of mining acaricide resistance-related genes and pathways using the transcriptomic data of Tetranychus urticae is presented.
+It is a common strategy to analyze transcriptomic data from samples subjected to different treatments (e.g., resistant vs. susceptible) in order to identify gene expression profiles, discover key genes, and infer related biological pathways. Here, a straightforward case of mining acaricide resistance-related genes and pathways using the transcriptomic data of _Tetranychus urticae_ is presented.
 
 ## Workflow
 <img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Content/flowchart.png" width="450">
@@ -48,44 +48,21 @@ According to the analysis of the top five up-regulated and down-regulated genes 
 
 <img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Content/top5function_for_updown.png" width="450">
 
-(5) Over-representation analysis
-The up-regulated pathways are primarily observed in glutathione metabolic processes across both comparisons, indicating an enhanced cellular response to oxidative stress. Notably, the "With Exposure vs. Reference" comparison shows up-regulation of UDP-glycosyltransferase activity, monooxygenase activity, and lysosome pathways associated with _Tetranychus urticae_. These findings suggest a heightened defense response and detoxification processes triggered by exposure. In the "Without Exposure" group, pathways related to proteolysis, cellular modified amino acid metabolism process, and sphingolipid metabolism process are also up-regulated, highlighting a potential shift in cellular energy and lipid signaling dynamics in the absence of external exposure.
+(5) Over-representation analysis  
+The up-regulated pathways are primarily observed in glutathione metabolic processes across both comparisons, indicating an enhanced cellular response to oxidative stress. Notably, the "WE vs. REF" comparison shows up-regulation of UDP-glycosyltransferase activity, monooxygenase activity, and lysosome pathways. These findings suggest a heightened defense response and detoxification processes triggered by exposure. In the "WOE vs. REF" group, pathways related to proteolysis, cellular modified amino acid metabolism process, and sphingolipid metabolism process are also up-regulated, highlighting a potential shift in cellular energy and lipid signaling dynamics in the absence of external exposure.
 
-Conversely, the down-regulated pathways encompass essential cellular and molecular components, including integral and intrinsic membrane components, iron ion binding, and catalytic activity, particularly in the "With Exposure vs. Reference" group. Processes such as antibiotic metabolism and peptidoglycan muralytic activity are significantly reduced in the exposed samples, indicating a suppression of specific immune responses. In both comparisons, pathways associated with drug metabolism, xenobiotics, and steroid biosynthesis in Tetranychus urticae are also down-regulated, suggesting a diminished interaction with or breakdown of external compounds in the affected system.
+Conversely, the down-regulated pathways encompass essential cellular and molecular components, including integral and intrinsic component of membrane, iron ion binding, and catalytic activity, particularly in the "WE vs. REF" group. Processes such as the TRAMP complex and peptidoglycan muralytic activity are significantly reduced in the samples of WE, indicating a suppressive effect on RNA and peptidoglycan.  
 
 <img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Content/pathway_ora.png" width="450">
 
+Note: NPA is the abbrevation for No Pathway Available.
 
-(2). Little difference is observed between WE_Ref and WOE_Ref, wihch also suggests the similarity between WE and WOE (see Figiure 2, 3 and Table 1).  
-(3). Up-regulated differential expressed genes are mainly associated to molecular transportation, detoxification, ubiquitination and hydrolase/proteolysis, while down-regulated ones are associated to ATPase, peptidase inhibitor and reduction of peroxides (see Table 1).  
-(4). Up-regulated pathways are mainly associated to membrane of cells/organelles (cellular component), glucan/ATP biosynthetic process (biological process), UDP-glycosyltransferase/monooxygenase/aspartic-type-peptidase activity (molecular function) and drug/glutathione/cytochrome-P450 metabolism (KEGG); down-regulated pathways are mainly associated to cytoplasma/Golgi stack  (cellular component), DNA topological change (biological process), various-transferase/DNA-topoisomerase (molecular function) and N-glycan-metabolism/autophagy (KEGG) (see Table 2).  
+(6) Pathway analysis  
+ In the up-regulated pathways, nucleosome organization, phosphatase regulation, and glycogen biosynthetic processes are significantly activated in the "WE vs. REF", suggesting an increase in chromatin modification and metabolic activity. Molecular functions such as oxidoreductase activity and aspartic-type endopeptidase activity are also up-regulated, reflecting heightened enzymatic activity. Additionally, KEGG pathways related to phenylalanine metabolism and drug metabolism by cytochrome P450  are prominent. The "WOE vs. REF" comparison underscores the activation of positive TOR signaling regulation and arachidonic acid secretion.  
 
-### Figure 1. Heatmap
+In terms of down-regulated pathways, "WE vs. REF" reveals reductions in processes such as cell junction assembly, RNA polyadenylation, and miRNA-mediated gene silencing. This indicates a decrease in cellular structural organization and gene silencing mechanisms. Molecular functions like intramolecular transferase and mannosyltransferase activity, along with KEGG pathways related to N-glycan biosynthesis and mismatch repair, are also down-regulated. Similarly, in the "WOE vs. REF" group, the down-regulation occurs in pathways such as cell junction organization, RNA polyadenylation, and various types of glycan biosynthesis, indicating less structural and metabolic activity in this condition.  
 
-
-### Figure 2. Differential expressed genes bar chart
-Conditions: FDR <= 0.05 & Log(FC) >=2.  
-
-<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/sig_gene_stats.png"  height=250>
-
-### Figure 3. Volcano plot
-Conditions: FDR <= 0.05 & Log(FC) >=2.  
-
-With Exposure vs Reference  |  Without Exposure vs Reference
-:-------------------------:|:-------------------------:
-<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_we_ref.png" height=200>|<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/volcano_plot_woe_ref.png" height=200>
-
-### Table 1. Top 5 up/down regulated differential expressed genes for each comparison
-Conditions: Ranked by log(FC).  
-
-<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/top5function_for_updown.png" height=250>
-
-### Table 2. Up/down regulated pathways for each comparison
-Conditions: Ranked by FDR.
-
-Over-representation analysis    |  Gene set enrichment analysis
-:-------------------------:|:-------------------------:
-<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/pathway_ora.png" height=150>|<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/FigureTable/pathway_gesa.png" height=150>
+<img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Content/pathway_gsea.png" width="450">
 
 ## Note
 In this demo, I use three packages/web tools to improve the workflow of the analysis: 
