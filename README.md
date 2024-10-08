@@ -11,7 +11,12 @@ Data source:
 Transcriptomic data: From NCBI (Accession: PRJNA946758).  
 Reference genome: From https://figshare.com/articles/dataset/Chromosome-level_genome_assembly_of_the_two-spotted_spider_mite_i_Tetranychus_urticae_i_/25241794/1.  
 GFF file: Same as Reference genome.  
-Desination table: Self-made .csv or .txt file, following the format of "Experiment design file" in iDEP.
+Desination table: Self-made .csv or .txt file, following the format of "Experiment design file" in iDEP.  
+
+In this demo, I use three packages/web tools to improve the workflow of the analysis:  
+1. Trimming sequence and generate QC report by **AfterQC** due to its versatility in quality control, data filtering, error profiling and base correction automatically.  
+2. Annotating sequence by **eggNOG-mapper** which is a powerful function annotation and prediction web tool.  
+3. Analyzing the gene counts matrix by **iDEP**, a web application with easy-to-use GUI for differential expression and pathway analysis, which saving a lot of time to understand R codes and debug.  
 
 ## Results
 (1) Preprocessing:  
@@ -64,12 +69,7 @@ In terms of down-regulated pathways, "WE vs. REF" reveals reductions in processe
 
 <img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Content/pathway_gsea.png" width="450">
 
-## Note
-In this demo, I use three packages/web tools to improve the workflow of the analysis: 
-1. Trimming sequence and generate QC report by **AfterQC** due to its versatility in quality control,
- data filtering, error profiling and base correction automatically. 
-2. Annotating sequence by **eggNOG-mapper** which is a powerful function annotation and prediction web tool. 
-3. Analyzing the gene counts matrix by **iDEP**, a web application with easy-to-use GUI for differential expression and pathway analysis, which saving a lot of time to understand R codes and debug.
+Note: NPA is the abbrevation for No Pathway Available.
 
 ## Reference
 Anders, S., Pyl, P. T., & Huber, W. (2015). HTSeq—a Python framework to work with high-throughput sequencing data. Bioinformatics, 31(2), 166-169.  
