@@ -5,7 +5,7 @@ It is a common strategy to analyze transcriptomic data from samples subjected to
 ## Workflow
 <img src="https://github.com/TK-CamBaz/Transcriptomic-data-analysis-DEMO/blob/main/Content/flowchart.png" width="450">
 
-Data in **bold** format are acquired from online database or made following the format.
+Data in **bold** format are acquired from online database or made by myself following the format.
 
 Data source:  
 Transcriptomic data: From NCBI (Accession: PRJNA946758).  
