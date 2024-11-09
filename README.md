@@ -16,7 +16,7 @@ Desination table: Self-made .csv or .txt file, following the format of "Experime
 In this demo, I use three packages/web tools to improve the workflow of the analysis:  
 1. Trimming sequence and generate QC report by _**AfterQC**_ due to its versatility in quality control, data filtering, error profiling and base correction automatically.  
 2. Annotating sequence by _**eggNOG-mapper**_ which is a powerful function annotation and prediction web tool.  
-3. Analyzing the gene counts matrix by _**iDEP**_, a web application with easy-to-use GUI for differential expression and pathway analysis, which saving a lot of time to understand R codes and debug.  
+3. Analyzing the gene counts matrix by _**iDEP**_, a web application with easy-to-use GUI for differential expression and pathway analysis, which saving a lot of hours to understand R codes and debug.  
 
 A tutorial with example files is available in Tutorial folder.  
 
