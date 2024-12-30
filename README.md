@@ -74,7 +74,7 @@ In terms of down-regulated pathways, "WE vs. REF" reveals reductions in processe
 Note: NPA is the abbrevation for No Pathway Available.
 
 ## Reference
-Anders, S., Pyl, P. T., & Huber, W. (2015). HTSeq—a Python framework to work with high-throughput sequencing data. Bioinformatics, 31(2), 166-169.  
+Anders, S., Pyl, P. T., & Huber, W. (2015). HTSeq—a Python framework to work with high-throughput sequencing data. _Bioinformatics_, 31(2), 166-169.  
 Cantalapiedra, C. P., Hernández-Plaza, A., Letunic, I., Bork, P., & Huerta-Cepas, J. (2021). eggNOG-mapper v2: functional annotation, orthology assignments, and domain prediction at the metagenomic scale. _Molecular Biology and Evolution_, 38(12), 5825-5829.  
 Chen, S., Huang, T., Zhou, Y., Han, Y., Xu, M., & Gu, J. (2017). AfterQC: automatic filtering, trimming, error removing and quality control for fastq data. _BMC Bioinformatics_, 18, 91-100.  
 Danecek, P., Bonfield, J. K., Liddle, J., Marshall, J., Ohan, V., Pollard, M. O., Whitwham, A., Keane, T., McCarthy, S. A., & Davies, R. M. (2021). Twelve years of SAMtools and BCFtools. _Gigascience_, 10(2), giab008.  
